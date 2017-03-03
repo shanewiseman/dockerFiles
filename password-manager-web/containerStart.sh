@@ -7,11 +7,11 @@ apt-get install build-essential libssl-dev git apache2 -y
 cd /tmp/
 git clone https://github.com/shanewiseman/password-manager-web.git
 
-rm -fr /var/www/
-mv ./password-manager-web/var/www/ /var/
+rm -fr /var/www/html/
+mv ./password-manager-web/var/www/html/ /var/www/
 
 rm -fr /etc/apache2/sites-enabled/
 mv ./password-manager-web/etc/apache2/sites-enabled/ /etc/apache2/
 
 /etc/init.d/apache2 start
-tail -f /var/logs/apache/access.log 
+tail -f /var/log/apache2/access.log 
