@@ -1,0 +1,6 @@
+from wisemananfitch/mysql
+
+EXPOSE 3306
+
+CMD /etc/init.d/mysql start
+CMD tail -f /var/log/mysql/error.log
