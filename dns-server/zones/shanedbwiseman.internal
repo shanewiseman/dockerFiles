@@ -1,0 +1,43 @@
+$TTL    604800
+@       IN      SOA     shanedbwiseman.internal. admin.shanedbwiseman.interal. (
+                              2         ; Serial
+                         604800         ; Refresh
+                          86400         ; Retry
+                        2419200         ; Expire
+                         604800 )       ; Negative Cache TTL
+;
+@ IN NS ns1.shanedbwiseman.internal.
+	
+
+ns1.shanedbwiseman.internal. IN A 10.0.0.100
+                             IN A 10.0.0.101
+                             IN A 10.0.0.102
+
+
+
+
+freenas.shanedbwiseman.internal.      IN A 10.0.0.15
+KubMaster.shanedbwiseman.internal.    IN A 10.0.0.100
+nas.shanedbwiseman.internal.          IN A 10.0.0.15
+build.shanedbwiseman.internal.        IN A 10.0.0.99
+
+
+kubNodes.shanedbwiseman.internal. IN A 10.0.0.100
+                                     ;A 10.0.0.101
+                                     ;A 10.0.0.102
+
+mediacenter.shanedbwiseman.internal. IN A 10.0.0.100
+
+mysql.shanedbwiseman.internal.       CNAME kubNodes.shanedbwiseman.internal.
+www.shanedbwiseman.internal.         CNAME kubNodes.shanedbwiseman.internal.
+mycloud.shanedbwiseman.internal.     CNAME kubNodes.shanedbwiseman.internal.
+grafana.shanedbwiseman.internal.     CNAME kubNodes.shanedbwiseman.internal.
+fah.shanedbwiseman.internal.         CNAME kubNodes.shanedbwiseman.internal.
+wp.spiced.shanedbwiseman.internal.   CNAME kubNodes.shanedbwiseman.internal.
+password.shanedbwiseman.internal.    CNAME kubNodes.shanedbwiseman.internal.
+pi.hole.shanedbwiseman.internal.     CNAME kubNodes.shanedbwiseman.internal.
+
+
+nodejs.shanedbwiseman.internal.        CNAME build.shanedbwiseman.internal.
+emby.shanedbwiseman.internal.        CNAME build.shanedbwiseman.internal.
+
